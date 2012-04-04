@@ -1,0 +1,1 @@
+/Users/snay2/.bashrc
