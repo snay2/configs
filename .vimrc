@@ -35,3 +35,6 @@ autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 nmap <C-N><C-N> :set invnumber<CR>
 set number
 
+" Allow mouse input in the terminal
+set mouse=a
+
