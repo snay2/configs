@@ -106,24 +106,6 @@ export JAVA_HOME=/usr/lib/jvm/java-1.6.0
 #Added 6 May 2010
 export PATH=/var/lib/gems/1.8/bin:/usr/share/racket/bin:$PATH
 
-#Added 15 June 2010
-krl() {
-    if [[ $@ == "commit" ]]; then
-        command krl commit | tee .krl-commit-status
-        notify-send -i ~/.kynetx-x.png "KRL" "`cat .krl-commit-status`"
-        rm .krl-commit-status
-    else
-        command krl $@
-    fi;
-}
-
-#Added 28 December 2010
-export EC2_HOME=~/.ec2/tools/
-export AWS_ELB_HOME=~/.ec2/tools/elb/
-export PATH=$PATH:$EC2_HOME/bin:$AWS_ELB_HOME/bin
-export EC2_PRIVATE_KEY=~/.ec2/PrivateKey.pem
-export EC2_CERT=~/.ec2/X509Cert.pem
-
 #Added 29 December 2010
 alias gopen=gnome-open
 
