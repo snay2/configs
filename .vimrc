@@ -4,6 +4,8 @@ if has("autocmd")
     filetype on
     filetype indent on
     filetype plugin on
+    " When editing a file, always jump to the last cursor position
+    autocmd BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 " No vi compatability
@@ -31,4 +33,5 @@ autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
 " Keyboard shortcut to turn on line numbering
 nmap <C-N><C-N> :set invnumber<CR>
+set number
 
