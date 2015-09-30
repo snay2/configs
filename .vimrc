@@ -38,3 +38,4 @@ set number
 " Allow mouse input in the terminal
 set mouse=a
 
+execute pathogen#infect()
